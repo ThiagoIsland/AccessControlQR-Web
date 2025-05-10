@@ -1,0 +1,41 @@
+.example-container {
+    height: 100vh;
+    display: flex; 
+  }
+  
+  mat-sidenav {
+    width: 250px; 
+    background: #bbb4b4;
+    display: flex;  
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center; 
+  }
+  
+  
+  mat-sidenav-content {
+    flex: 1; 
+    padding: 20px; 
+    background: #ffffff; 
+  }
+
+  .route-button {
+    display: flex;
+    justify-content: center; 
+    align-items: center;  
+    background-color: #44496e; 
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: 2px solid #000000; 
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+    text-transform: uppercase;
+    /* font-weight: bold; */
+    margin: 10px 0px 0px 15px; 
+    width: 100%;  
+    max-width: 220px; 
+    text-align: center;
+  }

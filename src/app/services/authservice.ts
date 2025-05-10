@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { catchError, map, Observable, throwError } from 'rxjs';
+
 
 interface LoginResponse {
   token: string;
@@ -14,8 +15,12 @@ export class AuthService {
 
   constructor(private http: HttpClient) {}
 
-  login(username: string, password: string): Observable<LoginResponse> {
-    return this.http.post<LoginResponse>(`${this.baseUrl}/auth/login`, { username, password });
+  login(user: any): Observable<LoginResponse> {
+    const serviceUrl = this.baseUrl + `/auth/login`
+    return this.http.post<LoginResponse>(serviceUrl, user)
+    // .pipe(
+    //   map((e: any) => e.data)),
+    //   catchError((e: Response) => throwError(e));
   }
 
   register(username: string, email: string, password: string, role: string){

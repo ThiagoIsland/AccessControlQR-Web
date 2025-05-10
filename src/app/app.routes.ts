@@ -8,7 +8,8 @@ import { ValidateAccessComponent } from './access/validate-access/validate-acces
 
 export const routes: Routes = [
     //user routes
-    {path: '', component: LoginComponent},
+    // {path: '', component: LoginComponent},
+    {path: 'Login', component: LoginComponent},
     {path: 'register', component: RegisterComponent},
     
     //visitor routes

@@ -1,0 +1,16 @@
+<mat-sidenav-container class="example-container">
+    <mat-sidenav mode="side" opened="true" class="example-sidenav">
+    <button class="route-button" routerLink="/Login" routerLinkActive="active">Login</button>
+    <button class="route-button" routerLink="/register" routerLinkActive="active">register</button> 
+    <button class="route-button" routerLink="/registervisitor" routerLinkActive="active">Register Visitor</button>
+    <button class="route-button" routerLink="/generateqr" routerLinkActive="active">generate qr</button>
+    <button class="route-button" routerLink="/getqr" routerLinkActive="active">get qr</button>
+    <button class="route-button" routerLink="/validate" routerLinkActive="active">validate</button>
+    
+    </mat-sidenav>
+  
+    <mat-sidenav-content class="example-content">
+    <router-outlet></router-outlet>
+    
+    </mat-sidenav-content>
+  </mat-sidenav-container>
